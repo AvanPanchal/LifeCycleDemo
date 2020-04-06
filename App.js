@@ -10,6 +10,10 @@ class App extends Component {
     super();
     console.log('constructor is called.')
   }
+  static getDerivedStateFromProps(props, state) {
+    console.log("getDerivedStateFromProps called here");
+    return null;
+  }
   componentWillMount() {
     //Deprecated after RN 0.60
     console.log('componentWillMount called.');
@@ -43,6 +47,13 @@ class App extends Component {
 
   componentDidCatch(error, info) {
     console.log('componentDidCatch called.');
+  }
+  getDerivedStateFromError(error) {
+    console.log('getDerivedStateFromError Called.')
+  }
+
+  getSnapshotBeforeUpdate(prevProp, prevState) {
+    console.log('getSnapshotBeforeUpdate Called.')
   }
   render() {
     return (

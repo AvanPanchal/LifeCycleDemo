@@ -2,65 +2,80 @@ import React, { Component } from "react";
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet, TouchableOpacity
 } from "react-native";
-
+import { Actions } from 'react-native-router-flux';
+import Routers from './src/routers/router';
 class App extends Component {
+  //first this method is called.
   constructor() {
     super();
-    console.log('constructor is called.')
-  }
-  static getDerivedStateFromProps(props, state) {
-    console.log("getDerivedStateFromProps called here");
-    return null;
-  }
-  componentWillMount() {
-    //Deprecated after RN 0.60
-    console.log('componentWillMount called.');
-  }
-  componentDidMount() {
-    console.log('componentDidMount called.');
-  }
+    this.state = {
 
-  componentWillReceiveProps(nextProp) {
-    //Deprecated after RN 0.60
-    console.log('componentWillReceiveProps called.', nextProp);
-  }
+    }
+    //   console.log('constructor is called.')
+    // }
+    // static getDerivedStateFromProps(props, state) {
+    //   //second this method is called.
+    //   console.log("getDerivedStateFromProps called here");
+    //   return null;
+    // }
+    // componentWillMount() {
+    //   //Deprecated after RN 0.60
+    //   console.log('componentWillMount called.');
+    // }
+    // componentDidMount() {
+    //   //fourth this method is called.
+    //   console.log('componentDidMount called.');
+    // }
 
-  shouldComponentUpdate(nextProp, nextState) {
-    console.log('shouldComponentUpdate called.');
-    return true;
-  }
+    // componentWillReceiveProps(nextProp) {
+    //   //Deprecated after RN 0.60
+    //   console.log('componentWillReceiveProps called.', nextProp);
+    // }
 
-  componentWillUpdate(nextProp, nextState) {
-    //Deprecated after RN 0.60
-    console.log('componentWillUpdate called.');
-  }
+    // shouldComponentUpdate(nextProp, nextState) {
+    //   //fifth this method is called.
+    //   console.log('shouldComponentUpdate called.');
+    //   return true;
+    // }
 
-  componentDidUpdate(prevProp, prevState) {
-    console.log('componentDidUpdate called.');
-  }
+    // componentWillUpdate(nextProp, nextState) {
+    //   //Deprecated after RN 0.60
+    //   console.log('componentWillUpdate called.');
+    // }
 
-  componentWillUnmount() {
-    console.log('componentWillUnmount called.');
-  }
+    // componentDidUpdate(prevProp, prevState) {
+    //   //seventh this method is called.
+    //   console.log('componentDidUpdate called.');
+    // }
 
-  componentDidCatch(error, info) {
-    console.log('componentDidCatch called.');
-  }
-  getDerivedStateFromError(error) {
-    console.log('getDerivedStateFromError Called.')
-  }
+    // componentWillUnmount() {
+    //   //eighth this method is called.
+    //   console.log('componentWillUnmount called.');
+    // }
 
-  getSnapshotBeforeUpdate(prevProp, prevState) {
-    console.log('getSnapshotBeforeUpdate Called.')
+    // componentDidCatch(error, info) {
+    //   //tenth this method is called.
+    //   console.log('componentDidCatch called.');
+    // }
+    // static getDerivedStateFromError(error) {
+    //   //nineth this method is called.
+    //   console.log('getDerivedStateFromError Called.')
+    // }
+
+    // getSnapshotBeforeUpdate(prevProp, prevState) {
+    //   //sixth this method is called.
+    //   console.log('getSnapshotBeforeUpdate Called.')
+    // }
   }
   render() {
+    //third this method is called
     return (
-      <View style={styles.container}>
-        <Text>Lifecycle App</Text>
+      <View>
+        <Routers />
       </View>
-    );
+    )
   }
 }
 export default App;
